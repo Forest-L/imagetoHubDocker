@@ -13,7 +13,7 @@ for image in $(cat img-list.txt)
 do
 	imagename=$(echo $image | awk -F '/' '{print $NF}')
 	docker pull $image
-	docker tag $image $ALI_REGISTRY/$imagename
+	#docker tag $image $ALI_REGISTRY/$imagename
 	docker tag $image $DOCKER_HUB/$imagename
 	# push到dockerhub
 	docker push $DOCKER_HUB/$imagename
