@@ -17,6 +17,7 @@ do
 	docker tag $image $DOCKER_HUB/$imagename
 	# push到dockerhub
 	docker push $DOCKER_HUB/$imagename
+	
 	# push到阿里云仓库
 	#docker push $ALI_REGISTRY/$imagename
 done
